@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amazon-like Shopping Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		.header {
+			background-color: #f0f0f0;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		.header img {
+			width: 100px;
+			height: 50px;
+			margin: 0 auto;
+		}
+		
+		.navbar {
+			background-color: #333;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.navbar a {
+			color: #fff;
+			text-decoration: none;
+			margin: 0 20px;
+		}
+		
+		.product-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		.product {
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 200px;
+		}
+		
+		.product img {
+			width: 100%;
+			height: 150px;
+			object-fit: cover;
+			border-radius: 10px 10px 0 0;
+		}
+		
+		.product h2 {
+			margin-top: 0;
+		}
+		
+		.product p {
+			margin-bottom: 20px;
+		}
+		
+		.product button {
+			background-color: #333;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.product button:hover {
+			background-color: #444;
+		}
+		
+		.footer {
+			background-color: #f0f0f0;
+			padding: 20px;
+			text-align: center;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img src="logo.png" alt="Logo">
+	</div>
+	<div class="navbar">
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Contact</a>
+	</div>
+	<div class="product-container">
+		<div class="product">
+			<img src="product1.jpg" alt="Product 1">
+			<h2>Product 1</h2>
+			<p>This is product 1.</p>
+			<button>Buy Now</button>
+		</div>
+		<div class="product">
+			<img src="product2.jpg" alt="Product 2">
+			<h2>Product 2</h2>
+			<p>This is product 2.</p>
+			<button>Buy Now</button>
+		</div>
+		<div class="product">
+			<img src="product3.jpg" alt="Product 3">
+			<h2>Product 3</h2>
+			<p>This is product 3.</p>
+			<button>Buy Now</button>
+		</div>
+	</div>
+	<div class="footer">
+		&copy; 2023 Amazon-like Shopping Page
+	</div>
+</body>
+</html>
