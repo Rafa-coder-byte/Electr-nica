@@ -1,0 +1,150 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: blue;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    flex: 1;
+}
+
+.boton-flecha {
+    position: fixed;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.boton-arriba {
+    bottom: 60px;
+} 
+
+.boton-abajo {
+    bottom: 10px;
+}
+
+.device {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.device img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Add styles for the search results container */
+.search-results-container {
+    display: none; /* Hide by default */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* Update styles for the devices container */
+  #venta {
+    display: block; /* Show by default */
+  }
+  
+ 
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+#search-results {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+    background: blue;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem 0; /* Disminuir la altura del footer */
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}

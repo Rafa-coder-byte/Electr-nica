@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-form">
+            <label for="pin">PIN:</label>
+            <input type="password" id="pin">
+            <button onclick="validatePin()">Iniciar Sesión</button>
+        </div>
+
+        <div id="add-product-form" class="hidden">
+            <h2>Agregar Nuevo Producto</h2>
+            <form action="/add-product" method="post" enctype="multipart/form-data">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion"></textarea>
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto">
+                <button type="submit">Aceptar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/auth.js"></script>
+</body>
+</html>

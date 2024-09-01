@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet - CellAdiction</title>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <header>
+        <h1>Tablet</h1>
+        <nav>
+            <ul>
+                <li><a id="Arreglar-link" href="index.html">Inicio</a></li>
+                <li><a id="venta-link" href="venta.html">Venta de Dispositivos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="producto">
+            <img src="tablet.jpg" alt="Tablet">
+            <h2>Tablet</h2>
+            <p>Una tablet de última generación con todas las características que necesitas para trabajar, estudiar y entretenerte.</p>
+            <p><strong>Precio:</strong> 8000.00 CUP</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para cualquier consulta o para agendar una cita, puedes contactarnos a través de los siguientes medios:</p>
+            <ul>
+                <li><strong>Teléfono:</strong> +53 123 456 789</li>
+                <li><strong>Email:</strong> contacto@celladiction.com</li>
+                <li><strong>Dirección:</strong> Calle Falsa 123, La Habana, Cuba</li>
+            </ul>
+
+            
+        <section id="reseñas">
+            <h2>Reseñas de Clientes</h2>
+            <form action="#" method="post">
+                <div class="form-inline">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                 </div>
+                <div class="rating-container">
+                    <label for="rating">Calificación:</label>
+                    <div class="star-rating">
+                        <span data-value="1">★</span>
+                        <span data-value="2">★</span>
+                        <span data-value="3">★</span>
+                        <span data-value="4">★</span>
+                        <span data-value="5">★</span>
+                    </div>
+                </div>
+
+                <label for="review">Reseña:</label>
+                <textarea id="review" name="review" rows="4" required></textarea>
+
+                <button type="submit">Enviar Reseña</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 CellAdiction. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+
+document.getElementById('venta-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetUrl = this.getAttribute('href');
+    
+    document.body.style.transition = 'opacity 1s';
+    document.body.style.opacity = 0;
+
+    setTimeout(() => {
+        window.location.href = targetUrl;
+    }, 1000);
+});
+
+document.getElementById('Arreglar-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetUrl = this.getAttribute('href');
+    
+    document.body.style.transition = 'opacity 1s';
+    document.body.style.opacity = 0;
+
+    setTimeout(() => {
+        window.location.href = targetUrl;
+    }, 1000);
+});
+
+        const stars = document.querySelectorAll('.star-rating span');
+        let selectedRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const value = star.getAttribute('data-value');
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= value) {
+                        s.style.color = 'gold';
+                    } else {
+                        s.style.color = '#ccc';
+                    }
+                });
+            });
+
+            star.addEventListener('mouseout', () => {
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= selectedRating) {
+                        s.style.color = 'gold';
+                    } else {
+                        s.style.color = '#ccc';
+                    }
+                });
+            });
+
+            star.addEventListener('click', () => {
+                const value = star.getAttribute('data-value');
+                if (selectedRating == value) {
+                    selectedRating = 0;
+                } else {
+                    selectedRating = value;
+                }
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= selectedRating) {
+                        s.style.color = 'gold';
+                    } else {
+                        s.style.color = '#ccc';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
