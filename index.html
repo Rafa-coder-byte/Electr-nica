@@ -1,84 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller de Celulares Samsung</title>
+    <title>Repair Addiction - Reparación de Dispositivos Electrónicos</title>
     <link rel="canonical" href="https://tu-usuario.github.io/tu-repositorio/">
-    <meta name="description" content="Taller especializado en la reparación de equipos electronicos en La Habana, Cuba, celulares, bocinas, televisores. Venta de dispositivos electrónicos como memorias y reproductores de música.">
-    <meta name="keywords" content="reparación de celulares, Samsung, Lg, Huawei, One plus, Motorola, Xiaomi, Poco, Alcatel,iPhone, venta de dispositivos electrónicos, memorias, reproductores de música, La Habana, Cuba">
+    <meta name="description" content="Taller especializado en la reparación de dispositivos electrónicos en Marianao, La Habana, Cuba. Reparación de celulares, bocinas, televisores y más.">
+    <meta name="keywords" content="reparación de dispositivos electrónicos, celulares, bocinas, televisores, La Habana, Cuba, Marianao">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylessidebar.css">
     <style>
         html {
             scroll-behavior: smooth;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1 id="inicio">Taller de Celulares</h1>
+    <header id="inicio">
+        <h1>Venta de Dispositivos</h1>
         <nav>
-            <ul>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#reseñas">Reseñas</a></li>
-                <li><a  id="venta-link" href="venta.html">Venta de Dispositivos</a></li>
-            </ul>
-        
-            
-        <button class="boton-flecha boton-arriba" onclick="location.href='#inicio'">↑</button>
-        <button class="boton-flecha boton-abajo" onclick="location.href='#final'">↓</button>
+                <button class="boton-flecha boton-arriba" onclick="location.href='#inicio'">↑</button>
+                <button class="boton-flecha boton-abajo" onclick="location.href='#final'">↓</button>
         </nav>
     </header>
+
     <main>
-        <section id="servicios">
-            <h2>Servicios</h2>
-            <p>En CellAdiction, nos especializamos en ofrecer soluciones rápidas y efectivas para todos tus problemas de celulares. Nuestro equipo de expertos está capacitado para manejar una amplia gama de servicios, tanto de hardware como de software, asegurando que tu dispositivo funcione como nuevo.</p>
-            <h3>Servicios de Hardware:</h3>
-            <ul>
-                <li><strong>Reparación de Pantallas:</strong> Reemplazo de pantallas rotas o dañadas con piezas de alta calidad.</li>
-                <li><strong>Cambio de Baterías:</strong> Sustitución de baterías agotadas para mejorar la duración de tu dispositivo.</li>
-                <li><strong>Reparación de Puertos de Carga:</strong> Solución de problemas con puertos de carga defectuosos o dañados.</li>
-                <li><strong>Reparación de Botones:</strong> Arreglo de botones de encendido, volumen y otros que no respondan.</li>
-                <li><strong>Reparación de Cámaras:</strong> Solución de problemas con cámaras frontales y traseras.</li>
-                <li><strong>Reparación de Altavoces y Micrófonos:</strong> Arreglo de problemas de sonido y grabación.</li>
-            </ul>
-            <h3>Servicios de Software:</h3>
-            <ul>
-                <li><strong>Actualización de Software:</strong> Instalación de las últimas actualizaciones de sistema operativo y aplicaciones.</li>
-                <li><strong>Eliminación de Virus y Malware:</strong> Limpieza de dispositivos infectados para asegurar su correcto funcionamiento.</li>
-                <li><strong>Recuperación de Datos:</strong> Recuperación de datos perdidos o eliminados accidentalmente.</li>
-                <li><strong>Configuración de Aplicaciones:</strong> Instalación y configuración de aplicaciones según tus necesidades.</li>
-                <li><strong>Desbloqueo de Dispositivos:</strong> Desbloqueo de dispositivos para su uso con cualquier operador.</li>
-            </ul>
-        </section>
-        <section id="nosotros">
-            <h2>Nosotros</h2>
-            <p>Somos un equipo de profesionales apasionados por la tecnología y la reparación de dispositivos móviles. Con años de experiencia en el sector, nos dedicamos a ofrecer un servicio de calidad y confianza a nuestros clientes. Nuestro objetivo es asegurar que cada cliente salga satisfecho con un dispositivo que funcione como nuevo.</p>
-            <h3>Nuestro Equipo</h3>
-            <ul>
-                <li><strong>Juan Pérez:</strong> Fundador y técnico principal, con más de 10 años de experiencia en reparación de celulares.</li>
-                <li><strong>María López:</strong> Especialista en software y seguridad, encargada de las actualizaciones y eliminación de malware.</li>
-                <li><strong>Carlos García:</strong> Técnico en hardware, experto en reparación de componentes físicos de los dispositivos.</li>
-            </ul>
-        </section>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Para cualquier consulta o para agendar una cita, puedes contactarnos a través de los siguientes medios:</p>
-            <ul>
-                <li><strong>Teléfono:</strong> +53 123 456 789</li>
-                <li><strong>Email:</strong> contacto@celladiction.com</li>
-                <li><strong>Dirección:</strong> Calle Falsa 123, La Habana, Cuba</li>
-            </ul>
-            <form>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button id="search-button">Buscar</button>
+        </div>
+        
+            <div class="search-results-container">
+        <div id="search-results"></div>
+             </div>
+        
+        <section id="venta">
+            <h2>Nuestros Dispositivos</h2>
+            <div class="device">
+                <img src="reproductor.jpg" alt="Reproductor">
+                <h3><a href="reproductor.html">Reproductor de música</a></h3>
+                <p>Un reproductor de música de última generación con todas las características que necesitas para mantenerte bailando y cantando.</p>
+                <p><strong>Precio:</strong> 5000.00 CUP</p>
+            </div>
+            <div class="device">
+                <img src="tablet.jpg" alt="Tablet">
+                <h3><a href="tablet.html">Tablet ABC</a></h3>
+                <p>Una tablet versátil y potente, perfecta para el entretenimiento y el trabajo en movimiento.</p>
+                <p><strong>Precio:</strong> 299.99 CUP</p>
+            </div>
+            <div class="device">
+                <img src="laptop.jpg" alt="Laptop">
+                <h3><a href="laptop.html">Laptop DEF</a></h3>
+                <p>Una laptop de alto rendimiento diseñada para satisfacer todas tus necesidades informáticas.</p>
+                <p><strong>Precio:</strong> 899.99 CUP</p>
+            </div>
+            <div class="device">
+                <img src="reproductor.jpg" alt="Reproductor">
+                <h3><a href="reproductor.html">Reproductor de música</a></h3>
+                <p>Un reproductor de música de última generación con todas las características que necesitas para mantenerte bailando y cantando.</p>
+                <p><strong>Precio:</strong> 5000.00 CUP</p>
+            </div>
+            <div class="device">
+                <img src="tablet.jpg" alt="Tablet">
+                <h3><a href="tablet.html">Tablet ABC</a></h3>
+                <p>Una tablet versátil y potente, perfecta para el entretenimiento y el trabajo en movimiento.</p>
+                <p><strong>Precio:</strong> 299.99 CUP</p>
+            </div>
+            <div class="device">
+                <img src="laptop.jpg" alt="Laptop">
+                <h3><a href="laptop.html">Laptop DEF</a></h3>
+                <p>Una laptop de alto rendimiento diseñada para satisfacer todas tus necesidades informáticas.</p>
+                <p><strong>Precio:</strong> 899.99 CUP</p>
+            </div>
+            <div class="device">
+                <img src="reproductor.jpg" alt="Reproductor">
+                <h3><a href="reproductor.html">Reproductor de música</a></h3>
+                <p>Un reproductor de música de última generación con todas las características que necesitas para mantenerte bailando y cantando.</p>
+                <p><strong>Precio:</strong> 5000.00 CUP</p>
+            </div>
+            <div class="device">
+                <img src="tablet.jpg" alt="Tablet">
+                <h3><a href="tablet.html">Tablet ABC</a></h3>
+                <p>Una tablet versátil y potente, perfecta para el entretenimiento y el trabajo en movimiento.</p>
+                <p><strong>Precio:</strong> 299.99 CUP</p>
+            </div>
+            <div class="device">
+                <img src="laptop.jpg" alt="Laptop">
+                <h3><a href="laptop.html">Laptop DEF</a></h3>
+                <p>Una laptop de alto rendimiento diseñada para satisfacer todas tus necesidades informáticas.</p>
+                <p><strong>Precio:</strong> 899.99 CUP</p>
+            </div>
+            <div class="device">
+                <img src="reproductor.jpg" alt="Reproductor">
+                <h3><a href="reproductor.html">Reproductor de música</a></h3>
+                <p>Un reproductor de música de última generación con todas las características que necesitas para mantenerte bailando y cantando.</p>
+                <p><strong>Precio:</strong> 5000.00 CUP</p>
+            </div>
+            <div class="device">
+                <img src="tablet.jpg" alt="Tablet">
+                <h3><a href="tablet.html">Tablet ABC</a></h3>
+                <p>Una tablet versátil y potente, perfecta para el entretenimiento y el trabajo en movimiento.</p>
+                <p><strong>Precio:</strong> 299.99 CUP</p>
+            </div>
+            <div class="device">
+                <img src="laptop.jpg" alt="Laptop">
+                <h3><a href="laptop.html">Laptop DEF</a></h3>
+                <p>Una laptop de alto rendimiento diseñada para satisfacer todas tus necesidades informáticas.</p>
+                <p><strong>Precio:</strong> 899.99 CUP</p>
+            </div>
         </section>
         
         <div id="reseñas" class="review-form">
@@ -92,11 +122,11 @@
     
                 <label for="rating">Calificación:</label>
                 <div class="star-rating">
-                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 estrellas">&#9733;</label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 estrellas">&#9733;</label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 estrellas">&#9733;</label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 estrellas">&#9733;</label>
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 estrella">&#9733;</label>
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 estrellas">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 estrellas">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 estrellas">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 estrellas">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 estrella">★</label>
                 </div>
     
                 <label for="review">Reseña:</label>
@@ -110,7 +140,7 @@
     <footer id="final">
         <p>© 2024 CellAdiction. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="scriptVenta.js"></script>
+    <script src="scriptsidebar.js"></script>
 </body>
 </html>
-

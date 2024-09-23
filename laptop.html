@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop - CellAdiction</title>
-    <link rel="stylesheet" href="styles5.css">
+    <link rel="stylesheet" href="stylesLaptop.css">
+    <link rel="stylesheet" href="stylessidebar.css">
 </head>
 <body>
     <header>
         <h1>Laptop</h1>
         <nav>
-            <ul>
-                <li><a id="Arreglar-link" href="index.html">Inicio</a></li>
-                <li><a id="venta-link" href="venta.html">Venta de Dispositivos</a></li>
-            </ul>
+            <button class="boton-flecha boton-arriba" onclick="location.href='#inicio'">↑</button>
+            <button class="boton-flecha boton-abajo" onclick="location.href='#final'">↓</button>
         </nav>
     </header>
     <main>
@@ -66,6 +65,75 @@
     <footer>
         <p>© 2024 CellAdiction. Todos los derechos reservados.</p>
     </footer>
-    <script src="script5.js"></script>
+    <script src="scriptsidebar.js"></script>
+    <script >document.addEventListener('DOMContentLoaded', () => {
+  
+        document.getElementById('venta-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetUrl = this.getAttribute('href');
+          
+            document.body.style.transition = 'opacity 1s';
+            document.body.style.opacity = 0;
+      
+            setTimeout(() => {
+              window.location.href = targetUrl;
+            }, 1000);
+          });
+      
+          document.getElementById('Arreglar-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetUrl = this.getAttribute('href');
+          
+            document.body.style.transition = 'opacity 0.5s';
+            document.body.style.opacity = 0;
+      
+            setTimeout(() => {
+              window.location.href = targetUrl;
+            }, 500);
+          });
+      
+              const stars = document.querySelectorAll('.star-rating span');
+              let selectedRating = 0;
+      
+              stars.forEach(star => {
+                  star.addEventListener('mouseover', () => {
+                      const value = star.getAttribute('data-value');
+                      stars.forEach(s => {
+                          if (s.getAttribute('data-value') <= value) {
+                              s.style.color = 'gold';
+                          } else {
+                              s.style.color = '#ccc';
+                          }
+                      });
+                  });
+      
+                  star.addEventListener('mouseout', () => {
+                      stars.forEach(s => {
+                          if (s.getAttribute('data-value') <= selectedRating) {
+                              s.style.color = 'gold';
+                          } else {
+                              s.style.color = '#ccc';
+                          }
+                      });
+                  });
+      
+                  star.addEventListener('click', () => {
+                      const value = star.getAttribute('data-value');
+                      if (selectedRating == value) {
+                          selectedRating = 0;
+                      } else {
+                          selectedRating = value;
+                      }
+                      stars.forEach(s => {
+                          if (s.getAttribute('data-value') <= selectedRating) {
+                              s.style.color = 'gold';
+                          } else {
+                              s.style.color = '#ccc';
+                          }
+                      });
+                  });
+              });
+          });
+          </script>
 </body>
 </html>

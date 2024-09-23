@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproductor de Música - CellAdiction</title>
-    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="stylesReproductor.css">
+    <link rel="stylesheet" href="stylessidebar.css">
 </head>
 <body>
     <header>
         <h1>Reproductor de Música</h1>
         <nav>
-            <ul>
-                <li><a id="Arreglar-link" href="Arreglar-celulares.html">Inicio</a></li>
-                <li><a id="venta-link" href="venta.html">Venta de Dispositivos</a></li>
-            </ul>
+            <button class="boton-flecha boton-arriba" onclick="location.href='#inicio'">↑</button>
+            <button class="boton-flecha boton-abajo" onclick="location.href='#final'">↓</button>
         </nav>
     </header>
+    
     <main>
         <section id="producto">
             <img src="reproductor.jpg" alt="Reproductor">
@@ -133,6 +133,7 @@ document.getElementById('Arreglar-link').addEventListener('click', function(e) {
             });
         });
     </script>
+    <script src="scriptsidebar.js"></script>
 </body>
 </html>
 

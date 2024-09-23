@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablet - CellAdiction</title>
-    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="stylesTablet.css">
+    <link rel="stylesheet" href="stylessidebar.css">
 </head>
 <body>
     <header>
         <h1>Tablet</h1>
         <nav>
             <ul>
-                <li><a id="Arreglar-link" href="index.html">Inicio</a></li>
-                <li><a id="venta-link" href="venta.html">Venta de Dispositivos</a></li>
+                <button class="boton-flecha boton-arriba" onclick="location.href='#inicio'">↑</button>
+                <button class="boton-flecha boton-abajo" onclick="location.href='#final'">↓</button>
             </ul>
         </nav>
     </header>
@@ -134,5 +135,6 @@ document.getElementById('Arreglar-link').addEventListener('click', function(e) {
             });
         });
     </script>
+    <script src="scriptsidebar.js"></script>
 </body>
 </html>

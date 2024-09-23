@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Dispositivos - CellAdiction</title>
+    <link rel="stylesheet" href="stylesServicios.css">
+    <link rel="stylesheet" href="stylessidebar.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="inicio">Repair Addiction</h1>
+        <nav>
+            <button class="boton-flecha boton-arriba" onclick="location.href='#inicio'">↑</button>
+            <button class="boton-flecha boton-abajo" onclick="location.href='#final'">↓</button>
+        </nav>
+    </header>
+    <main>
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>En Repair Addiction, nos especializamos en ofrecer soluciones rápidas y efectivas para todos tus problemas de dispositivos electrónicos. Nuestro equipo de expertos está capacitado para manejar una amplia gama de servicios, tanto de hardware como de software, asegurando que tu dispositivo funcione como nuevo.</p>
+            <h3>Servicios de Hardware:</h3>
+            <ul>
+                <li><strong>Reparación de Pantallas:</strong> Reemplazo de pantallas rotas o dañadas con piezas de alta calidad.</li>
+                <li><strong>Cambio de Baterías:</strong> Sustitución de baterías agotadas para mejorar la duración de tu dispositivo.</li>
+                <li><strong>Reparación de Puertos de Carga:</strong> Solución de problemas con puertos de carga defectuosos o dañados.</li>
+                <li><strong>Reparación de Botones:</strong> Arreglo de botones de encendido, volumen y otros que no respondan.</li>
+                <li><strong>Reparación de Cámaras:</strong> Solución de problemas con cámaras frontales y traseras.</li>
+                <li><strong>Reparación de Altavoces y Micrófonos:</strong> Arreglo de problemas de sonido y grabación.</li>
+            </ul>
+            <h3>Servicios de Software:</h3>
+            <ul>
+                <li><strong>Actualización de Software:</strong> Instalación de las últimas actualizaciones de sistema operativo y aplicaciones.</li>
+                <li><strong>Eliminación de Virus y Malware:</strong> Limpieza de dispositivos infectados para asegurar su correcto funcionamiento.</li>
+                <li><strong>Recuperación de Datos:</strong> Recuperación de datos perdidos o eliminados accidentalmente.</li>
+                <li><strong>Configuración de Aplicaciones:</strong> Instalación y configuración de aplicaciones según tus necesidades.</li>
+                <li><strong>Desbloqueo de Dispositivos:</strong> Desbloqueo de dispositivos para su uso con cualquier operador.</li>
+                <li><strong>Flasheo de Dispositivos:</strong> <a href="https://es.wikipedia.org/wiki/Flasheo_de_dispositivos">Más información sobre flasheo</a>.</li>
+                <li><strong>Bypass de Seguridad:</strong> <a href="https://es.wikipedia.org/wiki/Bypass_de_seguridad">Más información sobre bypass</a>.</li>
+            </ul>
+        </section>
+
+    </main>
+    <footer id="final">
+        <p>© 2024 Repair Addiction. Todos los derechos reservados.</p>
+    </footer>
+    <script> 
+    document.addEventListener('DOMContentLoaded', () => {
+    const servicesSection = document.querySelector('#servicios');
+        if (servicesSection) {
+            const hardwareServices = [
+                { name: 'Reparación de Pantallas', description: 'Reemplazo de pantallas rotas o dañadas con piezas de alta calidad.' },
+                { name: 'Cambio de Baterías', description: 'Sustitución de baterías agotadas para mejorar la duración de tu dispositivo.' },
+                { name: 'Reparación de Puertos de Carga', description: 'Solución de problemas con puertos de carga defectuosos o dañados.' },
+                { name: 'Reparación de Botones', description: 'Arreglo de botones de encendido, volumen y otros que no respondan.' },
+                { name: 'Reparación de Cámaras', description: 'Solución de problemas con cámaras frontales y traseras.' },
+                { name: 'Reparación de Altavoces y Micrófonos', description: 'Arreglo de problemas de sonido y grabación.' }
+            ];
+    
+            const softwareServices = [
+                { name: 'Actualización de Software', description: 'Instalación de las últimas actualizaciones de sistema operativo y aplicaciones.' },
+                { name: 'Eliminación de Virus y Malware', description: 'Limpieza de dispositivos infectados para asegurar su correcto funcionamiento.' },
+                { name: 'Recuperación de Datos', description: 'Recuperación de datos perdidos o eliminados accidentalmente.' },
+                { name: 'Configuración de Aplicaciones', description: 'Instalación y configuración de aplicaciones según tus necesidades.' },
+                { name: 'Desbloqueo de Dispositivos', description: 'Desbloqueo de dispositivos para su uso con cualquier operador.' },
+                { name: 'Flasheo de Dispositivos', description: '<a href="https://es.wikipedia.org/wiki/Flasheo_de_dispositivos">Más información sobre flasheo</a>.' },
+                { name: 'Bypass de Seguridad', description: '<a href="https://es.wikipedia.org/wiki/Bypass_de_seguridad">Más información sobre bypass</a>.' }
+            ];
+       
+    
+            const hardwareList = servicesSection.querySelector('ul:nth-of-type(1)');
+            const softwareList = servicesSection.querySelector('ul:nth-of-type(2)');
+    
+            
+            hardwareList.innerHTML = '';
+            softwareList.innerHTML = '';
+    
+            hardwareServices.forEach(service => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${service.name}:</strong> ${service.description}`;
+                hardwareList.appendChild(listItem);
+            });
+    
+            softwareServices.forEach(service => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${service.name}:</strong> ${service.description}`;
+                softwareList.appendChild(listItem);
+            });
+        }
+    });
+        
+</script>
+<script src="scriptsidebar.js"></script>
+</body>
+</html>

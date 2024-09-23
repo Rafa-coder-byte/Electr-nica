@@ -1,0 +1,49 @@
+#toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #333, #555);
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+#sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 60px 0 0 0; /* Agrega un margen superior para evitar que el botón de inicio quede tapado */
+}
+
+#sidebar nav ul li {
+    margin: 20px 0;
+}
+
+#sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Aumenta la especificidad */
+#sidebar a {
+    color: blue; /* Color inicial del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+#sidebar a:hover {
+    color: green; /* Color del enlace al pasar el cursor */
+}
